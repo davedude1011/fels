@@ -310,9 +310,6 @@ export class Piece {
 export type AnyPiece = Pawn | Knight | Bishop | Rook | Queen | King;
 
 export class Pawn extends Piece {
-    name: string;
-    glb_path: string;
-    
     constructor({ id, name, glb_path, team, has_moved }: {
         id?: string,
         name?: string,
@@ -368,9 +365,6 @@ export class Pawn extends Piece {
 }
 
 export class Knight extends Piece {
-    name: string;
-    glb_path: string;
-
     constructor({ id, name, glb_path, team, has_moved }: {
         id?: string,
         name?: string,
@@ -413,9 +407,6 @@ export class Knight extends Piece {
 }
 
 export class Bishop extends Piece {
-    name: string;
-    glb_path: string;
-
     constructor({ id, name, glb_path, team, has_moved }: {
         id?: string,
         name?: string,
@@ -462,9 +453,6 @@ export class Bishop extends Piece {
 }
 
 export class Rook extends Piece {
-    name: string;
-    glb_path: string;
-
     constructor({ id, name, glb_path, team, has_moved }: {
         id?: string,
         name?: string,
@@ -511,9 +499,6 @@ export class Rook extends Piece {
 }
 
 export class Queen extends Piece {
-    name: string;
-    glb_path: string;
-
     constructor({ id, name, glb_path, team, has_moved }: {
         id?: string,
         name?: string,
@@ -561,9 +546,6 @@ export class Queen extends Piece {
 }
 
 export class King extends Piece {
-    name: string;
-    glb_path: string;
-
     constructor({ id, name, glb_path, team, has_moved }: {
         id?: string,
         name?: string,

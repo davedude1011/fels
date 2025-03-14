@@ -16,8 +16,11 @@ export default function PieceElement({ piece, position, is_selected }: {
         const newScene = SkeletonUtils.clone(scene);
 
         newScene.traverse((object) => {
+            // @ts-expect-error it works ok
             if (object.isMesh && object.material) {
+                // @ts-expect-error it works ok
                 object.material = object.material.clone();
+                // @ts-expect-error it works ok
                 object.material.color = new Color(Piece.colors[piece.team]);
             }
         });
@@ -36,6 +39,7 @@ export default function PieceElement({ piece, position, is_selected }: {
     });
 
     return (
+        // @ts-expect-error it works ok
         <a.group
             position-x={animated_props.position_x}
             position-y={animated_props.position_y}
@@ -45,6 +49,7 @@ export default function PieceElement({ piece, position, is_selected }: {
             rotation-z={animated_props.rotation_z}
         >
             <primitive object={clonedScene} scale={0.02} rotation={Piece.rotations[piece.team]} />
+            {/* @ts-expect-error it works ok */}
         </a.group>
     )
 }

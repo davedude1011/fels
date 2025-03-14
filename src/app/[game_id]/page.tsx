@@ -47,7 +47,6 @@ export default function App() {
                         });
                     }
                 })
-                // @ts-expect-error it works ok
                 set_piece_components(temp_piece_components);
                 set_board(deserialized_board)
             }
@@ -69,7 +68,6 @@ export default function App() {
                         });
                     }
                 })
-                // @ts-expect-error it works ok
                 set_piece_components(temp_piece_components);
                 set_board(deserialized_board);
             };
