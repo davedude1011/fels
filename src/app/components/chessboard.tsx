@@ -57,7 +57,7 @@ export default function Chessboard({ game_id, USER_TEAM, board, piece_components
                                 handle_select_square(square);
                             }
                             else {
-                                if (board.movable_squares.includes(square)) handle_move_to_square(square);
+                                if (board.movable_squares.includes(square) && board.selected_square.piece.team == USER_TEAM) handle_move_to_square(square);
                                 else if (board.selected_square) {
                                     audio.play({
                                         // @ts-expect-error just deal with it ok
